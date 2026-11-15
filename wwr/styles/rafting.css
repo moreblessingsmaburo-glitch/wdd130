@@ -11,11 +11,6 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -25,11 +20,13 @@ header {
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.5;
 }
 
 header,
 main footer {
     width: 840px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -47,10 +44,42 @@ article {
     padding: 8px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+/*Header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
+header img {
+    width: 120px;
+    height: auto;
+    margin: 8px 16px;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+}
+
+header nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-bottom: 3px solid transparent;
+}
+
+header nav a: hover header nav a: :focus-visible {
+    border-bottom-color: var(--secondary-color);
+}
+
+/*Hero*/
 .hero {
     position: relative;
 }
@@ -73,7 +102,66 @@ h1 {
     /* white text - make sure there is enough contrast with the background-color*/
 }
 
+.hero article {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 16px;
+    background-color: rgba(238, 246, 248, 0.88);
+    border-left: 6px solid var(--secondary-color);
+}
+
 .hero article img {
     float: right;
     width: 125px;
+    margin: 0 0 8px 16px;
+    border: 3px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.hero article p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sections */
+
+main > section {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+main > section h2 {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    text-align: center;
+    margin-top: 16px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+}
+
+/* Small screens: stack the overlay under the image */
+@media (max-width: 600px) {
+    h1 {
+        position: static;
+        opacity: 1;
+    }
+
+    .hero article {
+        position: static;
+        margin: 0;
+    }
 }
