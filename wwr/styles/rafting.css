@@ -75,7 +75,8 @@ header nav a {
     border-bottom: 3px solid transparent;
 }
 
-header nav a: hover header nav a: :focus-visible {
+header nav a:hover,
+header nav a:focus-visible {
     border-bottom-color: var(--secondary-color);
 }
 
