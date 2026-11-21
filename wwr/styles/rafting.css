@@ -159,7 +159,7 @@ footer {
 }
 
 /* Small screens: stack the overlay under the image */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     h1 {
         position: static;
         opacity: 1;
