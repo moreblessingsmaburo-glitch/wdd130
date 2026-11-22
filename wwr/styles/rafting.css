@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #123047;
+    --primary-color: #055a05;
     /* forest green */
-    --secondary-color: #087e9b;
+    --secondary-color: #f4a261;
     /* warm sand */
-    --accent1-color: #17252e;
+    --accent1-color: #264653;
     /* dark slate blue */
-    --accent2-color: #f2b544;
+    --accent2-color: #e9c46a;
     /* light golden yellow */
     --heading-font: Times New Roman, Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -20,19 +20,16 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 header,
 main footer {
     width: 840px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
-img{
-    display: block;
-    max-width: 100%;
-}
 h1,
 h2 {
     font-family: var(--heading-font);
@@ -43,13 +40,13 @@ nav,
 p,
 section,
 article {
-    margin: 1rem;
+    margin: 16px;
+    padding: 8px;
 }
 
 /*Header*/
 header {
-    display: grid;
-    grid-template-columns: 150px 1fr;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -78,25 +75,19 @@ header nav a {
     border-bottom: 3px solid transparent;
 }
 
-header nav a:hover,
-header nav a:focus-visible {
+header nav a: hover header nav a: :focus-visible {
     border-bottom-color: var(--secondary-color);
 }
 
 /*Hero*/
 .hero {
     position: relative;
-    margin: 1rem;
-    background-color: var(--primary-color);
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
-    min-height: 360px;
-    max-height: 520px;
-    object-fit: cover;
 }
 
 h1 {
@@ -108,6 +99,7 @@ h1 {
     opacity: 0.7;
     background-color: var(--accent1-color);
     color: #fff;
+    /* white text - make sure there is enough contrast with the background-color*/
 }
 
 .hero article {
@@ -143,10 +135,6 @@ main > section h2 {
     margin-bottom: 8px;
 }
 
-.adventure {
-    font-weight: bold;
-}
-
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -165,7 +153,8 @@ footer {
     margin: 0 8px;
 }
 
-@media (max-width: 400px) {
+/* Small screens: stack the overlay under the image */
+@media (max-width: 600px) {
     h1 {
         position: static;
         opacity: 1;
