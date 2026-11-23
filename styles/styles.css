@@ -1,74 +1,45 @@
- *{
-    margin: 0;
+/* Main content */
+main {
+    max-width: 840px;
+}
+
+/* Aside section */
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    /* 1 */
+    padding: 1rem;
+    background-color: #a71818;
+    color: #a12020;
+    text-align: center;
+}
+
+aside p {
+    text-align: center;
+    color: #a12020;
+}
+
+/* Image inside aside */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Image inside main */
+main img {
+    width: 150px;
+    height: auto;
+}
+
+/* Paragraphs */
+p {
     padding: 0;
-    box-sizing: border-box;
- }
+}
 
- nav {
-     background-color: #2c3e50;
-     padding: 0.5rem;
- }
-
- nav a {
-     color: #fff;
-     padding: 0.5rem 1rem;
-     display: block;
- }
-
- h1 {
-     color: #2c3e50;
- }
-
- main {
-     max-width: 840px;
- }
-
- main img {
-    /* you most likely will have other CSS declarations here*/
-     float: right;
-     width: 150px;
-     height: auto;
-     border: 2px solid #2c3e50;
-     padding: 5px;
-     box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
- }
-
- aside {
-     width: 20em;
-     margin: 1rem;
-     border: 1px solid rgb(0 0 0 / 0.2);
-     padding: 1rem;
-     background-color: #eee;
-     color: #333;
-     text-align: center;
- }
-
- aside h2 {
-    positio : absolute;
-    top: 47px;
-    left: 150px;
- }
- aside img {
-     width: 200px;
-     height: auto;
- }
-
- p {
-     padding: 0;
- }
-
- /* Footer */
- footer {
-     margin-top: 15px;
-     border-top: 1px solid #000;
-     text-align: center;
- }
-
- /* Class Selectors */
- .box {
-     margin: 1rem;
-     border: 1px solid rgb(0 0 0 / 10%);
-     padding: 1rem ;
-     background-color: #ddd;
-     color: #000;
- }
+/* Footer */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
